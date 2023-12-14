@@ -1,0 +1,56 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream> 
+#include <clocale> 
+
+using namespace std; 
+
+int main() 
+
+{
+    setlocale(LC_ALL, "Russian"); 
+    
+    int n, space, star; 
+    
+    cout << "Напишите кол-во звезд в основании треугольника: "; 
+    cin >> n; 
+    
+    while (!((n > 0) && (n % 2 == 1) && (n > 3))) 
+    { 
+        
+        cout << "Данное значение не подходит, необходимо ввести новое: "; 
+        cin >> n; 
+        
+    } 
+    
+    space = (n - 1) / 2; 
+    star = 1; 
+    
+    for (int t = 1; t <= (n + 1) / 2; t++) 
+    { 
+        cout << endl; 
+        
+        for (int h = 1; h <= space; h++) 
+        { 
+            cout << "  "; 
+            
+        } 
+        space--; 
+        
+        for (int g = 1; g <= star; g++) 
+        { 
+            cout << "* "; 
+            
+        } 
+        star = star + 2; 
+        
+    } 
+    return 0; 
+
+} 
